@@ -20,7 +20,7 @@ pipelines:
                    command: make
   "yaml-example": # definition of yaml-example pipeline
     group: yaml-example1
-    label_template: "${mygit[:8]}"
+    label_template: "${mygit[:7]}"
     locking: off
     materials:
       mygit: # this is the name of material
