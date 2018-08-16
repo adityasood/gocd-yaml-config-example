@@ -10,8 +10,4 @@ pipelines:
           jobs:
             build: # name of the job
               tasks:
-               - exec: # indicates type of task
-                   command: /bin/bash
-                   arguments:
-                     - -c
-                     - "echo -e 'this is the\nBestUse of\nOurplugin'>testFile.txt"
+               - script: "echo -e 'this is the\nBestUse of\nOurplugin'>testFile.txt"
