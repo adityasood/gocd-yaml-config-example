@@ -14,4 +14,4 @@ pipelines:
                    command: /bin/bash
                    arguments:
                      - -c
-                     - "echo -e 'this is \ntheBestUse \nofOurplugin\n'>testFile.txt"
+                     - "echo -e 'this is theBestUse ofOurplugin'>testFile.txt"
