@@ -9,7 +9,6 @@ pipelines:
     - Build:
         jobs:
           build:
-            elastic_profile_id: "rhel7"
             tasks:
             - exec:
                 command: mkdir
