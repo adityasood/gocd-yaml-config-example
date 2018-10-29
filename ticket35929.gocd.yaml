@@ -1,0 +1,20 @@
+format_version: 3
+pipelines:
+  TestGoPipelineAPI:
+    group: DevOps
+    materials:
+      mygit:
+        git: https://github.com/gocd-contrib/getting-started-repo.git
+    stages:
+    - Build:
+        jobs:
+          build:
+            elastic_profile_id: "rhel7"
+            tasks:
+            - exec:
+                command: mkdir
+                arguments:
+                - "surefire-reports"
+            artifacts:
+            - test:
+                source: surefire-reports
