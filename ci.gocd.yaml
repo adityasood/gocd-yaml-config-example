@@ -50,6 +50,7 @@ pipelines:
                 report: test-reports/index.html
               tasks: # ordered list of tasks to execute in job csharp
                - fetch:
+                   artifact_origin: gocd
                    pipeline: yamlpipe1
                    stage: build
                    job: build
