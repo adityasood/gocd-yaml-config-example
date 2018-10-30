@@ -17,3 +17,5 @@ pipelines:
             artifacts:
             - test:
                 source: surefire-reports
+            - build:
+                source: surefire-reports
