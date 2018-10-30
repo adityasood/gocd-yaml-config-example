@@ -17,5 +17,6 @@ pipelines:
             artifacts:
             - test:
                 source: surefire-reports
+                destination: test-reports
             - build:
                 source: surefire-reports
