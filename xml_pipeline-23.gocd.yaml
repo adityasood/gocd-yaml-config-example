@@ -1,0 +1,26 @@
+pipelines:
+  xml_pipeline-23:
+    group: first
+    label_template: ${COUNT}
+    lock_behavior: lockOnFailure
+    materials:
+      git:
+        git: https://github.com/adityasood/licensemgmt.git
+        shallow_clone: true
+        auto_update: true
+        branch: master
+        destination: dest
+    stages:
+    - defaultStage:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+        jobs:
+          defaultJob:
+            timeout: 0
+            tasks:
+            - exec:
+                command: ls
+                run_if: passed
