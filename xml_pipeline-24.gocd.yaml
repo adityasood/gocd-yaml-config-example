@@ -12,7 +12,7 @@ pipelines:
         destination: dest
       mydependency:
         pipeline: upstream-pipeline-1
-        stage: test
+        stage: deploy
     stages:
     - defaultStage:
         fetch_materials: true
