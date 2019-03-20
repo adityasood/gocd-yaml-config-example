@@ -19,7 +19,7 @@ pipelines:
           type: success
         jobs:
           defaultJob:
-            timeout: 0
+            timeout: 1
             tasks:
             - exec:
                 command: ls
