@@ -11,7 +11,7 @@ pipelines:
         branch: master
         destination: dest
       mydependency:
-        pipeline: upstream-pipeline-1
+        pipeline: upstream-pipeline-2
         stage: deploy
     stages:
     - defaultStage:
