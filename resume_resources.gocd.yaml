@@ -22,4 +22,5 @@ pipelines:
             tasks:
             - exec:
                 command: bash
+                arguments: ./resume_resources.sh deepti
                 run_if: failed
