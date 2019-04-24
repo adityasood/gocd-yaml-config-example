@@ -2,8 +2,9 @@ pipelines:
   resume-resources:
     group: test
     materials:
-      git: git@github.com/adityasood/gocd-demo-config-repo-json.git
-      branch: master
+      git: 
+        git: git@github.com/adityasood/gocd-demo-config-repo-json.git
+        branch: master
     stages:
       - resume-resources: # name of stage
           jobs:
