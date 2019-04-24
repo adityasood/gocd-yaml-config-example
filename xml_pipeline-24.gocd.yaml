@@ -10,9 +10,6 @@ pipelines:
         auto_update: true
         branch: master
         destination: dest
-      mydependency:
-        pipeline: upstream-pipeline-1
-        stage: deploy
     stages:
     - defaultStage:
         fetch_materials: true
