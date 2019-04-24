@@ -1,15 +1,25 @@
 pipelines:
   resume-resources:
-    group: test
+    group: first
+    label_template: ${COUNT}
+    lock_behavior: lockOnFailure
     materials:
-      git: 
-        git: git@github.com/adityasood/gocd-demo-config-repo-json.git
+      git:
+        git: https://github.com/adityasood/licensemgmt.git
+        shallow_clone: true
+        auto_update: true
         branch: master
     stages:
-      - resume-resources: # name of stage
-          jobs:
-            resume-resources: # name of the job
-              tasks:
-                - exec: # indicates type of task
-                    command: bash
-                    arguments: ./resume_resources.sh deepti
+    - resume-resources:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+        jobs:
+          resume-resources:
+            timeout: 1
+            tasks:
+            - exec:
+                command: bash
+                run_if: failed
